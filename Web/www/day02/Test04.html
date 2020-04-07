@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test04</title>
+<style>
+	body {
+		text-align: center;
+	}
+	
+	.iblock {
+		display: inline-block;
+	}
+	
+	.div100 {
+	style="display: inline-block; 
+	width: 100px; 
+	height: 100px;
+	}
+	
+	.round50 {
+		border-radius: 50%;
+	}
+	
+	.sh10 {
+		box-shadow:0 0 10px slateblue;
+	}
+	
+	.dContainer {
+		width:110px; 
+		height: 110px; 
+		padding: 5px; 
+		border: 1px solid orange;
+	}
+	
+	#img1 {
+		width:auto; 
+		height: 100px; 
+	}
+	
+	#img2 {
+		display: inline-block; 
+		width: 100px; 
+		height: 100px; 
+		background-color: pink;
+	}
+	
+	#img3 {
+		display: inline-block; 
+		width: 100px; 
+		height: 100px; 
+		background-color: orange;
+	}
+	
+	#img4 {
+		width: 100px; 
+		height: auto;
+	}
+	
+	#img5 {
+		overflow: hidden; 
+		margin-top: 3px; 
+		margin-bottom:1px; 
+		margin-left:2px;
+		width: 100px; 
+		heigth: 100px; 
+		border: 1px solid gray;
+	}
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<!-- 
+		 class 속성
+		 	: 태그에 속성을 공통적으로 부여하기 위해서 부여하는 속성
+		 	
+		 	inner style 또는 out style 형식으로 스타일을 적용할 경우에으는
+		 	클래스에 대한 정의를 다음 형식으로 정의해주면 된다.
+		 	
+		 		형식]
+		 			
+		 			.클래스이름{
+		 				속성이름: 속성값;
+		 				속성이름: 속성값;;
+		 			}
+		 			
+		 inner style에서 태그에 직접 스타일을 적용시키는 방법
+		 	
+		 	태그이름{
+		 		속성이름: 속성값;
+		 	}
+		 	
+		 태그에 id 속성을 부여해서 처리하는 방법
+		 	1. 태그에 id="아이디이름"
+		 	2. style 태그 내부에 
+		 	
+		 		#아이디이름 {
+		 			속성이름: 속성값;
+		 			속성이름: 속성값;
+		 		}
+	 -->
+<div class="div100 sh10" id="img2">햄</div><br><br>
+	<div class="div100 round50 sh10"  id="img3">치즈</div><br><br>
+	
+	<!-- 
+		테두리의 모서리를 둥글게 처리하는 방법
+			border-radius:사이즈
+	 -->
+	<img class="round50 sh10 iblock" src="../img/img_avatar2.png"/ id="img4"><br><br>
+	<div class="round50 iblock dContainer" >
+		<div class="round50 sh10 iblock" id="img5">
+			<img class="iblock" id="img1" src="../img/img_avatar5.png" />
+		</div>
+	</div>	
+</body>
+</html>

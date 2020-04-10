@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	alert(no);
+	var no = 10;
+	alert(no);
+	
+	function func01(){
+		var num;
+		alert(num);
+		alert(no1);
+		alert('############');
+		var no1 = 10
+		num = 10;
+		alert(num);
+		/*
+		==> 아래 형식으로 자바스크립트 엔진에서 해석하게 된다.
+			var no1;
+			var num;
+			alert(num);
+			alert(no1);
+			alert('############');
+			no1 = 10
+			num = 10;
+			alert(num);
+			
+			내부적으로 이렇게 처리를 하게 되므로
+			함수 내부에서 변수를 만들 경우는
+			되도록이면
+			함수 선언 부근에서 (첫문장 근처에서) 변수를 만들어주세요.
+		*/
+	}
+	
+	func01();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+hr {
+	display: inline-block;
+	width: 500px;
+}
+
+hr:nth-child(2n) {
+	border: 1px solid red;
+}
+
+input {
+	display: inline-block;
+	background-color: aqua;
+	width: 20px;
+	height: 20px;
+}
+
+:checked {
+	background-color: blue;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	function getGrade() {
+		var kor = 95; // 지역변수
+	}
+	
+	function getGrd(){
+		math = 85;	// 전역변수
+	}
+	
+	var kor = 100; // 전역변수
+	var math = 90;
+	
+	getGrade();
+	getGrd();
+	alert('국어점수 : ' + kor);
+	alert('수학점수 : ' + math);
+</script>
+</head>
+<body>
+
+</body>
+</html>

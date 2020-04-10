@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	/* 
+		javascript에서 함수 만드는 방법
+		
+			형식 1]
+					function	함수이름([매개변수리스트]) {
+						함수내용
+					}
+
+			형식 2]
+					var 변수이름 = function([매개변수리스트]) {
+						// 이 함수는 함수만 보자면 무명함수에 해당한다.
+						// 따라서 만드는 무명함수를 변수에 할당하는 형식이다.
+						함수내용
+					}
+		참고]
+			함수 자체를 변수에 입력할 수도 있다.
+			
+			예]
+				function f1() {
+					
+				}
+				
+				var f2 = f1;
+	*/
+	
+</script>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6 w3-padding">
+		<h2 class="w3-orange w3-text-white w3-padding w3-center w3-card w3-round w3-border w3-border-gray">Function Test</h2>
+		<div class="w3-col">
+			<h2 class="w3-col w3-text-purple" id="d1"></h2>
+			<div class="w3-col m2 w3-button w3-blue" id="btn1" onclick="func01()">btn1</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function fun00(){
+		var str = prompt('이름을 대시오');
+		document.getElementById('d1').innerHTML = str;
+	}
+	var func01 = fun00;
+</script>
+</html>

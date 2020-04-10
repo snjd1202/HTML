@@ -1,0 +1,30 @@
+span {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	background-color: lightgray;
+	border: 1px solid gray;
+	margin: 10px;
+	text-align: center;
+}
+
+div + span {
+	color: orange;
+	font-weight: bold;
+}
+
+div > span {
+	background-color: aqua;
+}
+
+div > span:first-child {
+	background-color:orange;
+}
+
+div > span:last-child {
+	background-color:purple;
+}
+
+div > span:nth-child(2) {
+	background-color:dodgerblue;
+}

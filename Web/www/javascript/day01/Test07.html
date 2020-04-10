@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+</style>
+<script type="text/javascript">
+/*
+	int no =10;
+	String no='abcd';
+	자바에서는 동일한 이름으로 변수를 만들 수 없다.
+	하지만 자바스크립트에서는
+	먼저 만들어진 변수에 다른 타입의 데이터를 입력하는 순간
+	그 변수는 타입이 마지막에 입력한 데이터의 타입으로 변하게 된다.
+*/
+
+	var no=10;
+	alert(no + ' - ' + (typeof no));
+	no = 'abcd';
+	alert(no + ' - ' + (typeof no));
+	var a, b, c=10;
+	alert(a + ' | ' + b + ' | ' + c);
+	var a=b=c=10;
+	alert(a + ' | ' + b + ' | ' + c);
+	var num; // 선언만 한 상태이고 변수의 데이터가 아직 정해지지 않은 상태
+	var obj=null; // 변수의 값이 없는 상태
+	document.write(typeof 100 + '<br>');
+	document.write(typeof 10.5 + '<br>');
+	document.write(typeof '서동혁' + '<br>');
+	document.write(typeof true + '<br>');
+	document.write(typeof [1, 2, 3] + '<br>');
+	document.write(typeof {name:'서동혁', age:27} + '<br>');
+	document.write(typeof num + '<br>');
+	document.write(typeof obj + '<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

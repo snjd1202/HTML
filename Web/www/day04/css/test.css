@@ -1,0 +1,46 @@
+p {
+	color: red;
+	font-size: 80pt;
+	font-weight: bold;
+}
+
+* {
+	color: purple;
+}
+
+p {
+	color: blue;
+}
+
+p {
+	display: inline-block;
+	/* float: left; */
+	color: green;
+	background-color: lightgray;
+	border: 1px solid gray;
+	width: 650px;
+}
+
+div {
+	text-align: center;
+}
+
+input {
+	color: gray;
+}
+
+ input[name="pw"] {
+	color: green;
+	background-color: pink;
+}
+/* input[type="password"] {
+	color: green;
+	background-color: pink;
+} */
+[name="id"] {
+	background-color: orange;
+}
+
+[name="id"]:focus {
+	background-color: red;
+}

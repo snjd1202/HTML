@@ -1,0 +1,19 @@
+.iblock {
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	background-color: green;
+	text-align: center;
+	font-size: 14pt;
+	font-weight: bold;
+	line-height: 1000%;
+}
+
+.iblock:hover {
+	background-color: aqua;
+	border: 10px dashed hotpink;
+}
+.iblock:active {
+	background-color: blue;
+	color: white;
+}

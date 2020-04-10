@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+</style>
+<script type="text/javascript">
+	/*
+		전역변수 & 지역변수
+			전역변수 : 코드 내 어느 위치에서든 호출할 수 있는 변수
+			지역변수 : 해당 블럭에서만 사용가능한 변수
+	*/
+var num; // 전역변수
+no = 33;		 // 전역변수, var는 생략이 가능하다.
+
+function f01() {
+	var l01 = 55;	// 함수블럭 안에서 만들어진 지역변수
+	var01 = 7;		// 함수블럭 내에서 변수를 만들 때 var를 생략할 경우에는 자동으로 전역변수가 된다.
+}
+f01()
+alert('num : ' + num + ' | no : ' + no /* + ' | l01 : ' + l01 */ + ' | var01 : ' + var01);
+
+var01 = 77;
+alert('num : ' + num + ' | no : ' + no /* + ' | l01 : ' + l01 */ + ' | var01 : ' + var01);
+</script>
+</head>
+<body>
+
+</body>
+</html>

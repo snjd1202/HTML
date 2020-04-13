@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+	.mt10 {
+		margin-top: 10px;
+	}
+	.rightalign {
+		text-align: right;
+	}
+	.ml10 {
+		margin-left: 10px;
+	}
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-orange w3-padding w3-card w3-center">
+			Parameter Test01
+		</h2>
+		<form method="get" action="Test04_01.html" id="frm" class="w3-col w3-card w3-padding mt10">
+			<div class="w3-col">
+				<label class="w3-col m3 rightalign" for="id">I D : </label>
+				<input class="w3-col m7 w3-input w3-border ml10" type="text" id="id" name="id">
+			</div>
+			<div class="w3-col mt10">
+				<label class="w3-col m3 rightalign" for="pw">P W : </label>
+				<input class="w3-col m7 w3-input w3-border ml10" type="password" id="pw" name="pw">
+			</div>
+			<div class="w3-col mt10">
+				<span class="w3-col w3-button w3-blue w3-hover-aqua" id="btn">Login</span>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	/*
+		이 페이지에서 폼태그를 전송을 하면 
+		Test04_01.html 파일로 파라미터가 전송되고
+		주소 표시줄에 전송된 내용이 입력이 될 것이다.
+			
+			id : euns
+			pw : 12345
+			
+			==> 
+			Test04_01.html?id=euns&pw=12345
+	*/
+	document.getElementById('btn').onclick = function(){
+		var sid = document.getElementById('id').value;
+		var spw = document.getElementById('pw').value;
+		// 둘중 하나라도 입력이 안되어있으면 이 함수는 실행하면 안되는 함수다.
+		// 따라서 그 경우는 다시 입력폼으로 돌아가야 한다.
+		if(!sid || !spw){
+			// 조건식에 변수를 사용하는 경우는
+			// 변수의 타입이  null 이거나 undefined 타입이면 false 를 반환한다.
+			alert('데이터 입력이 안됐습니다.');
+			return;
+		}
+		document.getElementById('frm').submit();
+	}
+</script>
+</html>

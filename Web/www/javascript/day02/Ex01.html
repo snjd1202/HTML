@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+	.mt10 {
+		margin-top: 10px;
+	}
+	
+	.mt20 {
+		margin-top: 20px;
+	}
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-orange w3-padding w3-card">
+			Tag Value Ex01
+		</h2>
+		<form class="w3-col w3-card w3-padding mt10">
+			<div class="w3-col">
+				<label class="w3-col m3" for="sid">I D : </label>
+				<input class="w3-col m7 w3-input w3-border" type="text" id="sid" name="sid">
+			</div>
+			<div class="w3-col mt10">
+				<label class="w3-col m3" for="spw">P W : </label>
+				<input class="w3-col m7 w3-input w3-border" type="password" id="spw" name="spw">
+			</div>
+			<div class="w3-col mt10">
+				<span class="w3-col w3-button w3-blue w3-hover-aqua" id="btn">Login</span>
+			</div>
+		</form>
+		<div class="w3-col w3-card w3-padding m20" id="frm">
+			<div class="w3-col">
+				<span class="w3-col m4" >I D : </span>
+				<span class="w3-col m7" id="id"></span>
+			</div>
+			<div class="w3-col m10">
+				<span class="w3-col m4" >P W : </span>
+				<span class="w3-col m7" id="pw"></span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	/*
+		문제 ]
+			입력받은 데이터 아이디와 비밀번호를 
+			frm 태그내의 id와 pw 태그에 데이터를 채워주세요.
+	*/
+	document.getElementById('btn').onclick = function(){
+				
+				var sid = document.getElementById('sid').value;
+				var spw = document.getElementById('spw').value;
+				
+				document.getElementById('id').innerHTML = '<h3>' + sid + '</h3>';
+				document.getElementById('pw').innerHTML = '<h3>' + spw + '</h3>';
+				
+				document.getElementById('frm').submit();
+			}
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	/*
+		var str = 'id=jfla&sns=youtube&flow=15M&name=김정화';
+		위 데이터를 배열로 만들어 보세요.
+	*/
+	var str = 'id=jfla&sns=youtube&flow=15M&name=김정화';
+		
+	var arr1 = str.split('&');
+	var arr2 = new Array();
+	for(var i=0; i < arr1.length; i++){
+		var tmp = arr1[i].split('=');
+		arr2[i] = tmp;
+		document.write(tmp + ' | ');
+	}
+	var key = new Array();
+	var val = new Array();
+	
+	var val = new Array();
+	for(var i = 0; i < arr1.length; i++){
+		key[i] = arr2[i][0];
+		val[i] = arr2[i][1];
+	}
+	
+	for(var i = 0; i<val.length; i++){
+		document.write('<center><h3>' + key[i]+ ' - ' + val[i] + '</h3></center>');
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

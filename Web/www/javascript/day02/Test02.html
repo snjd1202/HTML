@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+	.mt10{
+		margin-top: 10px;
+	}
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-orange w3-padding w3-card">
+			Tag Value Test
+		</h2>
+		<div class="w3-col w3-card w3-padding">
+			<div class="w3-col">
+				<label class="w3-col m3" for="id">I D : </label>
+				<input class="w3-col m7 w3-input w3-border" type="text" id="id" name="id">
+			</div>
+			<div class="w3-col mt10">
+				<label class="w3-col m3" for="id">P W : </label>
+				<input class="w3-col m7 w3-input w3-border" type="password" id="pw" name="pw">
+			</div>
+			<div class="w3-col mt10">
+				<span class="w3-col w3-button w3-blue w3-hover-aqua" id="btn">Login</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	/*
+		일반태그의 내용을 읽는 방법은 innerHTML, innerText, textContent로 접근해서 읽는다.
+		입력태그의 내용을 읽는 방법은 value 라는 property에 접근해서 읽는다.
+		
+		그리고 데이터를 강제로 입력할 때도 value라는 property에 접근해서 입력한다.
+	*/
+	document.getElementById('btn').onclick = function(){
+		/*
+		// 강제로 데이터 채우는 방법
+		document.getElementById('id').value = 'dDragon';
+		*/
+		// 데이터를 읽어서 Test01.html 파일에 데이터를 넘겨보자.
+		// 다른 페이지를 호출하는 방법은
+		// location 객체에 접근해서 처리해주면 된다.
+		// 형식 ] location.href = '주소';
+		var sid = document.getElementById('id').value;
+		var spw = document.getElementByPw('pw').value;
+		location.href = 'Test01.html?id=' + sid + '&pw=' + spw;
+	}
+</script>
+</html>

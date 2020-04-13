@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	var str='   abcdef   ghi   ';
+	str = str.trim();
+	str = str.replace('abcd', 'ABCD');
+	alert('###' + str + '###')
+	var arr=str.split(' ');
+	var str1;
+	for(var i =0; i < arr.length; i++){
+		var tmp = arr[i];
+		if(!tmp){
+			continue;
+		}else {
+			str1 += tmp;
+		}
+	}
+	alert(str1);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6 w3-padding">
+		<div class="w3-col">
+			<span class="w3-col m4 w3-right-align w3-padding">아이디 : </span>
+			<div class="w3-col m8 w3-padding" id="id"></div>
+		</div>
+		<div class="w3-col">
+			<span class="w3-col m4 w3-right-align w3-padding">sns : </span>
+			<div class="w3-col m8 w3-padding" id="sns"></div>
+		</div>
+		<div class="w3-col">
+			<span class="w3-col m4 w3-right-align w3-padding">구독자 : </span>
+			<div class="w3-col m8 w3-padding" id="flow"></div>
+		</div>
+		<div class="w3-col">
+			<span class="w3-col m4 w3-right-align w3-padding">이름 : </span>
+			<div class="w3-col m8 w3-padding" id="name"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var str = 'id=jfla&sns=youtube&flow=15M&name=김정화';
+	var tmp1 = str.split('&');
+	var arr = {};
+	var key = new Array();
+	for(var i = 0; i < tmp1.length; i++){
+		var tmp2 = tmp1[i].split('=');
+		key[i] = tmp2[0];
+		arr[tmp2[0]]=tmp2[1];
+	}	
+	
+	for(var i = 0; i < key.length; i++){
+		document.write(key[i] + ' - ' + arr[key[i]] + '<br>'); // arr.key[0] ==> arr.'id'--> x | arr.id - o
+	}
+	document.getElementById(key[i]).innerText = arr[key[i]];
+	
+</script>
+</html>

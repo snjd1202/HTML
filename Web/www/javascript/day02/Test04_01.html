@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+	.mt10 {
+		margin-top: 10px;
+	}
+</style>
+<!-- 
+	location 객체
+		: 웹브라우저의 주소 표시줄에 표기되는 URL로부터 다양한 정보를 추출할 수 있는 속성들을 가지고 있는 객체
+		
+		속성]	javascript08 pdf 참고
+			
+			1. href
+			
+			2. host
+			
+			3. hostname
+			
+			4. hash
+			
+			5. pathname
+			
+			6. port
+			
+			7. protocol
+			
+			8. search
+ -->
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-orange w3-padding w3-card w3-center">
+			Location 객체테스트
+		</h2>
+		<div id="frm" class="w3-col w3-card w3-padding mt10">
+			<div class="w3-col">
+				<label class="w3-col m3" for="sid">I D : </label>
+				<span class="w3-col m7 w3-input w3-border" id="sid"></span>
+			</div>
+			<div class="w3-col mt10">
+				<label class="w3-col m3" for="spw">P W : </label>
+				<span class="w3-col m7 w3-input w3-border" id="spw"></span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var addr = location.href;
+	var param = location.search;
+	alert(param);
+	var param = location.search.substring(1);
+	
+	var sid = param.substring(0, param.indexOf('&')); // ==> id=xxxxx
+	var spw = param.substring(param.indexOf('&') + 1);
+	var id = sid.substring(sid.indexOf('=') + 1);
+	var pw = spw.substring(spw.indexOf('=') + 1);
+	
+	var sid = param.slice(0, param.indexOf('&'));
+	var spw = param.slice(param.indexOf('&') + 1);
+	alert(sid);
+	
+	document.getElementById('sid').innerHTML = id;
+	document.getElementById('spw').innerHTML = pw;
+	
+</script>
+</html>

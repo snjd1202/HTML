@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+	/*
+	'?name=dDragon&tel=010-1111-1111&age=23'
+	 위의 데이터로 파라미터를 받아서 각 파라미터를 분리해서
+	 경고창에 출력하세요.
+	 출력형식 ]
+			
+		이름 : dDragon
+		전화 : 010-1111-1111
+		나이 : 23
+	단 문자열 처리는 slice() 를 사용해서 처리하세요.
+	
+		1. 하나씩 처리하는 방법
+		
+		2. 반복문으로 처리하는 방법
+		
+	*/
+	// 건네받은 파라미터 받고
+	var param = location.search.substring(1); // ? 는 제외하고 꺼내온다.
+	/*
+		위 작업의 결과로
+			search = '?name=xxxx1&tel=xxxxxxx2&age=xxxxxxx3'
+			을 자른 결과
+			param = 'name=xxxx1&tel=xxxxxxx2&age=xxxxxxx3'
+			
+	*/
+	var tmp = param;
+	var name = tmp.slice(tmp.indexOf('=')+ 1, tmp.indexOf('&'));
+	/*
+		name = xxxx1
+		
+		이제 tel의 데이터를 추출해야한다.
+		tmp의 데이터를 변경시켜놓을 필요가 있다.
+		tmp에서 name에 관련된 데이터와 & 를 제외하고 담아야겠다.
+	*/
+	tmp = tmp.slice(tmp.indexOf('&') + 1 , tmp.length);
+	// tel 을 뽑아낸다.
+	var tel = tmp.slice(tmp.indexOf('=')+ 1, tmp.indexOf('&'));
+	/*
+		tel = xxxxxxx2
+		
+		tmp 다시 교체하고
+	*/
+	tmp = tmp.slice(tmp.indexOf('&') + 1 , tmp.length);
+	var age = tmp.slice(tmp.indexOf('=')+ 1, tmp.length);
+	
+	alert('이름 : ' + name + '\n전화 : ' + tel + '\n나이 : ' + age);
+</script>
+</head>
+<body>
+
+</body>
+</html>

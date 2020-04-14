@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+	.mr5 {
+		margin: 5px;
+	}
+	.s50 {
+		width: 50px;
+		height: 50px;
+	}
+	.b1 {
+		display: inline-block;
+		width: 602px;
+		margin-top: 50px;
+	}
+</style>
+<script type="text/javascript">
+	var arr = new Array();
+	var arr1 = {};
+	alert(typeof arr + ' | ' + typeof arr1);
+	
+	/*
+		배열에 1에서 100까지 채우고
+		짝수번째 방에는 0으로 초기화 하세요.
+	*/
+/* 	for(var i = 1; i <= 100; i++){
+		if(i%2 == 0){
+			arr[i] = 0;
+		} else {
+			arr[i] = i;
+		}
+	}
+	alert(arr); */
+	
+	// 배열에 채우고
+	for(var i = 0 ; i < 100 ; i++ ){
+		arr[i] = i + 1;
+	}
+	
+	// 짝수번째 방 데이터 0으로 초기화 하고
+	for(var i = 0 ; i < 100 ; i++ ){
+		if(i % 2 != 0){
+			arr[i] = 0;
+		}
+	}
+	
+	// 출력하기
+	document.write('<div class="w3-center"><div class="b1">');
+	for(var i = 0 ; i < 100 ; i++ ){
+		var no = arr[i];
+		document.write('<div class="w3-col s50 mr5 w3-border">' + no + '</div>');
+	}
+	document.write('</div></div>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

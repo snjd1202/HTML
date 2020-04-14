@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+	var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	
+	function printArr(item, index){
+		document.write('arr[ ' + index + ' ] : ' + item + '<br>');
+	}
+	arr.forEach(printArr);
+	
+	document.write('<br>');
+	document.write('<br>');
+	arr.forEach(function(item, index){
+		document.write('arr[ ' + index + ' ] : ' + item + '<br>');
+	});
+	
+	var index = 0;
+	var func1 = function(item){
+		document.write('arr[ ' + index++ + ' ] : ' + item + '<br>');
+	}
+	document.write('<br>');
+	document.write('<br>');
+	arr.forEach(func1);
+</script>
+</head>
+<body>
+
+</body>
+</html>

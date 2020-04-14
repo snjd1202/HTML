@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hw01</title>
+<link rel="stylesheet" href="css/euns.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="mainfr">
+		<div class="dlogo">
+			<p class="phidden">phidden</p>
+		</div>
+		<div class="inprofile">
+			<h4>프로필입력</h4>
+		</div>
+	<form class="frm" method="post" action="" id="frm" name="frm">
+		<div>
+			<label for="id" class="ttl">아이디</label>
+			<div class="input-right">
+				<input class="inputtext" name="id" type="text"><span class="idomain">@nate.com</span>
+				<a href="#" class="btnbox">
+					<span class="btn">중복확인</span>
+				</a>
+				<!-- <input type="button" value="중복확인" style="background-color:red;"><br> -->
+			</div>
+			<div class="hf">
+				<div class="hintfr">
+					<span class="hint">영문소문자,숫자 조합 6~40자(-,_사용가능)</span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<label for="pw" class="ttl">비밀번호</label>
+			<div class="inputfr1">
+				<input class="input1" name="pw" type="password">
+			</div>
+		</div>
+		<div>
+			<label for="pw2" class="ttl">비밀번호 확인</label>
+			<div class="inputfr1">
+				<input class="input1" name="pw2" type="password">
+			</div>
+		</div>
+		<div>
+			<label for="name" class="ttl">이름</label>
+			<div class="inputfr1">
+				<input class="input1" name="name" type="text"/>
+			</div>
+		</div>
+		<div>
+			<label for="mail" class="ttl">이메일</label>
+			<div class="inputfr1">
+				<input class="mail" name="mail" type="text"/><span class="golbaeng">@</span><input class="mail" name="name" type="text">
+			</div>
+		</div>
+		<div>
+			<!-- <div id="tellbl">
+			</div> -->
+				<label for="tel" class="ttl">휴대폰</label>
+			<div class="inputfr1">
+				<select class="input1">
+					<option value="82">Korea(82)
+				</select>
+				`<input class="input1" name="phone" type="text">
+			</div>
+		</div>
+		<div id="dg">
+			<label for="gen" class="ttl">성별</label>
+			<div class="inputfr1 radiofr">
+				<div class="rfr">
+					<input type="radio" value="Female" id="f" name="gen">
+				</div>
+				<label for="f">여자</label>
+				<div class="rfr">
+					<input type="radio" value="Male" id="m" name="gen">
+				</div>
+				<label for="m">남자</label>
+			</div>
+		</div>
+		<div>
+			<label for="birth" class="ttl">생년월일</label>
+			<div class="inputfr1">
+				<select class="dayIn">
+					<option value="#">년도
+					<option value="2020">2020
+					<option value="2019">2019
+					<option value="2018">2018
+					<option value="2017">2017
+					<option value="2016">2016
+				</select> 년 
+				<select class="dayIn">
+					<option value="#"> 월
+					<option value="1"> 1
+					<option value="2"> 2
+					<option value="3"> 3
+					<option value="4"> 4
+					<option value="5"> 5
+					<option value="6"> 6
+					<option value="7"> 7
+					<option value="8"> 8
+					<option value="9"> 9
+					<option value="10"> 10
+					<option value="11"> 11
+					<option value="12"> 12
+				</select> 월 
+				<select class="dayIn">
+					<option value="일"> 일
+					<option value="1"> 1
+					<option value="2"> 2
+					<option value="3"> 3
+					<option value="4"> 4
+					<option value="5"> 5
+					<option value="6"> 6
+					<option value="7"> 7
+					<option value="8"> 8
+					<option value="9"> 9
+					<option value="10">10
+					<option value="11">11
+					<option value="12">12
+					<option value="13">13
+					<option value="14">14
+					<option value="15">15
+					<option value="16">16
+					<option value="17">17
+					<option value="18">18
+					<option value="19">19
+					<option value="20">20
+					<option value="21">21
+					<option value="22">22
+					<option value="23">23
+					<option value="24">24
+					<option value="25">25
+					<option value="26">26
+					<option value="27">27
+					<option value="28">28
+					<option value="29">29
+					<option value="30">30
+					<option value="31">31
+				</select> 일 
+			</div>
+		</div>
+		<div id="dg">
+			<label for="ip" class="ttl">해외IP 차단</label>
+			<div class="inputfr1 radiofr">
+				<div class="rfr">
+					<input type="radio" value="X" id="x" name="ip">
+				</div>
+				<label for="x">차단</label>
+				<div class="rfr">
+					<input type="radio" value="O" id="o" name="ip">
+				</div>
+				 <label for="o">허용</label>
+			</div>
+		</div>
+		<hr class="hr">
+		<div class="btnfr">
+			<a href="#" class="btnbox">
+				<span class="btn">다음</span>
+			</a>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

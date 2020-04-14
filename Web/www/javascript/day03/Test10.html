@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+	var arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+	document.write(arr.join('-'));
+	document.write('<br>');
+	arr = arr.reverse();
+	var tmp2 = arr;
+	document.write(arr.join('-'));
+	document.write('<br>');
+	
+	arr = [2,4,6,1,3,5,7];
+	arr = arr.sort();
+	var arr1 = arr;
+	document.write(arr.join('-'));
+	
+	// slice()
+	arr = arr.slice(1, 4);
+	document.write('<br>');
+	document.write('<br>');
+	document.write(arr.join('-'));
+	var tmp = arr1.slice(2, -2);
+	document.write('<br>');
+	document.write('<br>');
+	document.write(tmp.join('-'));
+	
+	// splice()
+	var data = tmp2.splice(1, 2);
+	document.write('<br>');
+	document.write('<br>');
+	document.write(tmp2.join('-'));
+</script>
+</head>
+<body>
+
+</body>
+</html>

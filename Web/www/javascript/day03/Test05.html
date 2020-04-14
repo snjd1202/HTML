@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-purple w3-padding w3-card w3-center">이벤트 테스트</h2>
+		<div class="w3-col w3-card w3-padding">
+			<label class="w3-col m3 w3-right-align w3-padding" for="id">I D : </label>
+			<input type="text" class="w3-col m8 w3-padding w3-border" id="id" name="id">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById('id').onchange = function(){
+		var str = this.value;
+		alert(str);
+	}
+</script>
+</html>

@@ -1,0 +1,31 @@
+.lblank {
+	display: inline-block;
+	width: 30%;
+}
+.centerfr {
+	display: inline-block;
+	width: 40%;
+}
+.logo {
+	height: 50px;
+	text-align: center;
+	background-image: url("../img/naver_logo_top.png");
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: center;
+}
+.phidden {
+	visibility: hidden;
+}
+.frm {
+	text-align: left;
+}
+.lbl {
+	display: block;
+}
+.input {
+	display: inline-block;
+}
+.edomain {
+	text-style: italic;
+}

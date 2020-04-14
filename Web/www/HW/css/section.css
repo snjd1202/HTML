@@ -1,0 +1,64 @@
+body {
+	text-align: center;
+}
+.ib {
+	display: inline-block;
+}
+.tfr {
+	width: 740px;
+	height: 884px;
+	border: 1px solid #ebeef3;
+}
+.nav {
+	width: 738px;
+	height: 45px;
+}
+.cbox {
+	width: 45px;
+	height: 45px;
+}
+.fu {
+	font-size: 20px;
+}
+.fu1 {
+	font-size: 28px;
+}
+.l14 {
+	position:relative;
+	left: 14px;
+}
+.l17 {
+	position:relative;
+	left: 18px;
+	top: -8px;
+}
+.mtxt {
+	
+}
+.bbtm {
+	border-bottom: 1px solid #ebeef3;
+}
+.gfont {
+	color: #666666;
+}
+.hmid {
+	line-height: 220%;
+}
+.hmid1 {
+	line-height: 220%;
+}
+.barR {
+	border-right: 1px solid #ebeef3;
+}
+.barL {
+	border-left: 1px solid #ebeef3;
+}
+.fRight {
+	float: right;
+}
+.alnleft {
+	text-align: left;
+}
+.alncnt {
+	text-align: center;
+}

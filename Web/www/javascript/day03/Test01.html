@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div id="d1">abcd</div>
+	<div>
+		<input type="text" id="i1" name="i1">
+		<textarea id="body" name="body" cols="50" rows="10"></textarea>
+	</div>
+	<div class="w3-center">
+		<div class="w3-button m2 w3-blue w3-hover-blue w3-border" id="btn">Click</div>
+	</div>
+</body>
+<script type="text/javascript">
+/*
+	this : 현재실행중인 객체 자기자신을 가리키는 예약어
+	
+ */
+	document.getElementById('btn').onclick = function(){
+		var str = this.innerHTML;
+		var sClass = this.getAttribute('class');
+		// 클래스 수동추가
+		//this.setAttribute('class', sClass + ' w3-card-4');
+		this.classList.remove('w3-blue');
+		this.classList.remove('w3-hover-blue');
+		this.classList.add('w3-purple');
+		this.classList.add('w3-hover-pink');
+		// 클래스 토글 추가
+		/* this.classList.toggle('w3-blue');
+		this.classList.toggle('w3-hover-blue'); */
+		// alert(sClass);
+		// d1의 내용 읽기
+		var dData = document.getElementById('d1').innerHTML;
+		// i1 의 입력내용 읽기
+		var iData = document.getElementById('i1').value;
+		// body의 입력내용읽기
+		var bData = document.getElementById('body').value;
+		//alert(dData + '\n' + iData + '\nbody : ' + bData);
+	}
+</script>
+</html>

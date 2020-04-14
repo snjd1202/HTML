@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-half">
+		<h2 class="w3-pink">DownLoad Test</h2>
+		<div class="w3-padding">
+			<div class="w3-half w3-button w3-blue w3-hover-aqua" id="btn1">html Download</div>
+			<div class="w3-half w3-button w3-purple w3-hover-pink" id="btn2">html Download2</div>
+		</div>
+		<a href="data:application/html;charset=utf-8, ../css/w3.css" id="a1" style="display: none;"></a>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById('btn1').onclick = function(){
+		document.getElementById('a1').click();
+	}
+	document.getElementById('btn2').onclick = function(){
+		var str = this.getAttribute('class');
+		str = str.replace(/\s*/,'\n');
+		alert(str);
+		var el = document.getElementById('a1');
+		el.setAttribute('href', 'data:application/text;charset=utf-8,'+str);
+		el.click();
+	}
+</script>
+</html>

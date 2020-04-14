@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+	.dnone {
+		display: none;
+	}
+	.vhid {
+		visibility: hidden;
+	}
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h3 class="w3-padding w3-purple">Toggle Test</h3>
+		<div>
+			<div class="w3-half w3-button" id="btn1">btn1</div>
+			<div class="w3-half w3-button" id="btn2">btn2</div>
+		</div>
+		<div class="w3-col w3-card" id="d1">
+			<pre>
+				a
+				b
+				c
+			</pre>
+		</div>
+		<div class="w3-col w3-card" id="d2">
+			<pre>
+				A
+				B
+				C
+			</pre>
+		</div>
+		<div class="w3-col w3-border">
+			<p id="p1"></p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var param = location.search.substring(1);
+	param = decodeURIComponent(param);
+	document.getElementById('p1').innerHTML = param;
+	document.getElementById('btn1').onclick = function(){
+		document.getElementById('d1').classList.toggle('vhid');
+	}
+	document.getElementById('btn2').onclick = function(){
+		document.getElementById('d2').classList.toggle('dnone');
+	}
+</script>
+</html>

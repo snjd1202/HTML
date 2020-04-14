@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+	.s10 {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+	}
+</style>
+<script type="text/javascript">
+	function func01(){
+		var el = document.getElementsByClassName('s10');
+		for(var i = 0 ; i < el.length ; i++ ){
+			el[i].classList.add('w3-blue');
+			el[i].classList.add('w3-card-4');
+		}
+		
+		var brd = document.getElementById('h2').style.border;
+		alert(brd);
+		document.getElementById('h2').style.border = '1px solid red';
+	}
+	
+	// mouseover 이벤트 함수
+	function func02(el){
+		var str = el.getAttribute('id');
+		alert(str);
+		el.classList.remove('w3-blue');
+		el.style.backgroundColor = 'purple';
+	}
+	
+	// mouseout 이벤트 함수
+	function mout(el){
+		el.classList.add('w3-blue');
+	}
+</script>
+</head>
+<body onload="func01()">
+<!-- 
+	onload 함수는 해당문서나 태그가 완성된 후에 실행되는 함수이다.
+	위의 body 태그의 의미는
+	body 태그의 내용이 완성된 후
+	func01() 를 실행시키세요...
+	라는 의미가 된다.
+ -->
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-half">
+		<h2 class="w3-amber w3-padding w3-card w3-center" style="border: 2px solid gray;" id="h2">onload Test</h2>
+		<div class="w3-col w3-padding w3-center">
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="0"><p></p></div>
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="1"><p></p></div>
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="2"><p></p></div>
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="3"><p></p></div>
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="4"><p></p></div>
+			<div class="s10 w3-border w3-margin" onmouseover="func02(this)" onmouseout="mout(this)" id="5"><p></p></div>
+		</div>
+	</div>
+</body>
+</html>

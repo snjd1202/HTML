@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-button w3-blue m2" id="b1" onclick="func1(this)">버튼1</div>
+	<div class="w3-button w3-blue m2" id="b2" onclick="func1(this)">버튼2</div>
+	<div class="w3-button w3-blue m2" id="b3" onclick="func1(this)">버튼3</div>
+	<div class="w3-button w3-blue m2" id="b4" onclick="func1(this)">버튼4</div>
+	<div class="w3-button w3-blue m2" id="b5" onclick="func1(this)">버튼5</div>
+</body>
+<script type="text/javascript">
+	var el = document.getElementsByTagName('div'); // 이렇게 선택하면 선택된 요소는 마치 배열처럼 담겨있다.
+	var str=el[2].innerHTML;
+	//alert(str);
+	// 버튼5의 배경색을 보라색으로 변경하게요.
+	el[4].classList.toggle('w3-blue');
+	el[4].classList.toggle('w3-purple');
+	
+	//var el1 = document.getElementsByClassName('m2');
+	//alert(el1[2].getAttribute('id'));
+	
+	// d3 태그의 내용을 Button3로 바꿔보자.
+	document.querySelectorAll('div.d3')[0].innerHTML = "Buttom3";
+
+	//자신을 넘겨주면 자신의 칼라를 오렌지로 바꿔주는 함수
+	function func1(elm){
+		elm.classList.toggle('w3-blue');
+		elm.classList.toggle('w3-orange');
+	
+	alert(elm.getAttribute('id'));
+	}
+</script>	
+</html>

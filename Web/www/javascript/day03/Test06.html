@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div>
+	<div class="w3-col m6">
+		<h2 class="w3-purple w3-padding w3-card w3-center">키보드 이벤트 테스트</h2>
+		<div class="w3-col w3-card w3-padding">
+			<div class="w3-col w3-padding">
+				<label class="w3-col m3 w3-right-align w3-padding" for="pw">P W : </label>
+				<input type="password" class="w3-col m8 w3-padding w3-border i3" id="pw" name="pw">
+			</div>
+			<div class="w3-col w3-padding">
+				<label class="w3-col m3 w3-right-align w3-padding" for="repw">rePW : </label>
+				<input type="password" class="w3-col m8 w3-padding w3-border i3" id="repw" name="repw">
+			</div>
+			<div class="w3-col w3-padding w3-center">
+				<small id="gl"></small>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById('repw').onkeyup = function(){
+		var pw = document.getElementById('pw').value;
+		var repw = document.getElementById('repw').value;
+		if(pw == repw){
+			document.getElementById('gl').innerHTML = '* 비밀번호가 동일합니다!';
+			document.getElementById('gl').style.color = 'blue';
+		} else {
+			document.getElementById('gl').innerHTML = '* 비밀번호가 일치하지 않습니다!!!';
+			document.getElementById('gl').style.color = 'red';
+		}
+	}
+	
+	// 입력태그로 포커스가 들어갔을 경우 이벤트 발생
+	document.getElementById('repw').onfocus = function(){
+		this.style.backgroundColor = "DodgerBlue";
+	}
+	// 입력태그에서 포커스가 빠져나갔을 때 이벤트 발생
+	document.getElementById('repw').onblur = function(){
+		this.style.backgroundColor = "white";
+	}
+	/* 
+	var element = document.getElementsByClassName('i3');
+	alert(element[1].getAttribute('name'));
+	*/
+</script>
+</html>

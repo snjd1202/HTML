@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	var arr = {'name':'홍길동', 'age':24, 'country': '율도국'};
+	
+	document.write(arr['name'] + ' - ');
+	document.write(arr.age + ' - ');
+	document.write(arr.country);
+	arr.age = 25;
+	document.write('<br>');
+	document.write(arr['name'] + ' - ');
+	document.write(arr.age + ' - '); // ==> arr.'age'
+	document.write(arr.country);
+</script>
+</head>
+<body>
+
+</body>
+</html>

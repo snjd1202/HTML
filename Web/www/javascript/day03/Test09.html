@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test 09</title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+	var city = ['서울', '대전', '제주'];
+	var city1 = ['부산', '대구', '원주'];
+	var str = city.join(' <small>그리고</small> ');
+	document.write('<div class="w3-col m3"><p></p></div>');
+	document.write('<div class="w3-col m6 w3-center">');
+	document.write('<h2 class="w3-orange w3-center w3-padding w3-border w3-border-red">' + str + '</h2>');
+	
+	str = city.concat('수원', '안산'); // 여기서 str 은 배열
+	str = str.join(' <small>그리고</small> ');// str 은 문자열
+	document.write('<h2 class="w3-blue w3-center w3-padding w3-border w3-border-red">' + str + '</h2>');
+	
+	str = city.concat(city1); // 여기서 str 은 배열
+	str = str.join(' <small>그리고</small> ');
+	document.write('<h2 class="w3-purple w3-center w3-padding w3-border w3-border-red">' + str + '</h2>');
+	document.write('</div>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

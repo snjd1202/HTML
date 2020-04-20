@@ -11,8 +11,20 @@
 	.mt1 {
 		margin-top: 10px;
 	}
+	.mt20 {
+		margin-top: 20px;
+	}
 	.ml {
 		margin-left: 10px;
+	}
+	.bd2 {
+		border: 2px solid darkseagreen;
+	}
+	.pd0 {
+		padding: 0px;
+	}
+	.dnone {
+		display: none;
 	}
 </style>
 </head>
@@ -30,38 +42,15 @@
 				<input type="password" id="pw" name="pw" class="w3-col m8 mt1 ml">
 			</div>
 		</div>
-		<div class="w3-card">
-			<div class="w3-half w3-button w3-red mt" id="cbtn">Cancel</div>
-			<div class="w3-half w3-button w3-blue mt" id="lbtn">Login</div>
+		<div class="w3-col w3-card pd0 mt">
+			<div class="w3-half w3-button w3-red" id="cbtn">Cancel</div>
+			<div class="w3-half w3-button w3-blue" id="lbtn">Login</div>
+		</div>
+		<div class="w3-col w3-card mt20 w3-padding w3-round bd2 dnone" id="d1">
+			<div class="w3-col">id : <span id="okid"></span></div>
+			<div class="w3-col mt">pw :<span id="okpw"></span></div>
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
-	/*
-		로그인 버튼이 클릭되면
-		입력태그의 내용을 읽고
-		아이디는 5글자이상 8글자 이하 그리고 영문자와 숫자로만 구성되어야 한다.
-		비밀번호는 6글자이상 8글자이하이고
-		영문 대소문자 하나씩 그리고 숫자하나씩 그리고 특수문자중 숫자패드의 특수문자 하나가 반드시 포함되어야 한다.
-		
-		만약 정규표현식에 통과되지 않는다면
-		입력폼의 내용을 모두 지우고
-		다시 입력받도록 하고
-		통과되면 경고창으로 통과 메시지를 출력하게 하세요.
-	*/
-	document.getElementById('cbtn').onclick = function(){
-		document.getElementById('id').value = '';
-		document.getElementById('pw').value = '';
-	}
-	
-	document.getElementById('lbtn').onclick = function(){
-		var inputId = document.getElementById('lbtn').value;
-		var inputPw = document.getElementById('lbtn').value;
-		var regexI = /[A-Za-z0-9]{4,7}$/g;
-		var regexP = /[A-Za-z0-9]{5,7}$/g;
-		var result = regexI.test(inputId);
-		var result2 = regexP.test(inputPw);
-		alert('I D : ' + result + ' P W : ' + result2);
-	}
-</script>
+<script type="text/javascript" src="../js/login.js"></script>
 </html>

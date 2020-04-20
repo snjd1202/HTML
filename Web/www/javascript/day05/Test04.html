@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<style>
+
+</style>
+<script type="text/javascript">
+	function random(n1, n2){
+		return Math.floor(Math.random()*(n2 - n1 + 1) + n1);
+	}
+	function authNo(){
+		var val = '';
+		for(let i = 0 ; i < 5 ; i++ ){
+			val += random(0, 9);
+		}
+		document.getElementById('auth').innerHTML = val;
+	}
+	/*
+		페이지 새로고침
+	*/
+	function refresh(){
+		location.reload();
+	}
+</script>
+</head>
+<body onload="authNo()">
+	<p>
+		고객님의 인증번호는 <strong id="auth">00000</strong> 입니다.
+	</p>
+	<input type="button" value="인증번호 새로 받기" onclick="refresh()">
+</body>
+</html>

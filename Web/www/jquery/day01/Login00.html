@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css" />
+<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<style>
+	.lbl1 {
+		min-width: 80px;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#lbl').attr('for', 'id');
+		
+		$('#lbtn').click(function(){
+			// 폼태그 속성 부여
+			$('#frm').attr('method', 'get');
+			$('#frm').attr('action', 'result00.html');
+			
+			// 인풋태그의 내용이 입력되 않으면 이 함수를 종료시키자.
+			var sid = $('#id').val();
+			var spw = $('#pw').val();
+			/*
+			if(!sid){
+				$('#pw').val('');
+				$('#id').focus();
+				return;
+			}
+			*/
+			if(!sid){
+				$('#id').val('dDragon');
+			}
+			if(!spw){
+				$('#pw').val('12345');
+			}
+			
+			$('#frm').submit();
+		});
+		
+		
+		$('#hbtn').click(function(){
+			var sid = $('#id').val();
+			var spw = $('#pw').val();
+			$('#mid').html(sid);
+			$('#mpw').html(spw);
+			$('#msg').stop().slideToggle();
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div class="w3-third"><p></p></div>
+	<div class="w3-third">
+		<h2 class="w3-blue w3-center w3-round-large w3-border w3-card-4">Login</h2>
+		<form class="w3-col w3-margin-top w3-padding w3-round-large w3-border w3-card-4" id="frm" name="frm">
+			<div class="w3-row w3-padding">
+				<label class="w3-col m3 w3-padding w3-right-align lbl1" id="lbl">I D : </label>
+				<input type="text" id="id" name="id" class="w3-col l9 m12 s12 w3-border w3-input">
+			</div>
+			<div class="w3-row w3-padding">
+				<label class="w3-col m3 w3-padding w3-right-align lbl1" for="pw">P W : </label>
+				<input type="password" id="pw" name="pw" class="w3-col l9 m12 s12 w3-border w3-input">
+			</div>
+		</form>
+		<div class="w3-col w3-margin-top w3-round-large w3-border w3-card-4">
+			<div class="w3-half w3-red w3-button" id="hbtn">Home</div>
+			<div class="w3-half w3-blue w3-button" id="lbtn">Login</div>
+		</div>
+		<div class="w3-col w3-margin-top w3-round-large w3-border w3-card-4" style="display: none;" id="msg">
+			<h4 class="w3-col m4 w3-padding w3-right-align">I D : </h4><h4 class="w3-col m8 w3-padding w3-center" id="mid"></h4>
+			<h4 class="w3-col m4 w3-padding w3-right-align">P W : </h4><h4 class="w3-col m8 w3-padding w3-center" id="mpw"></h4>
+		</div>
+	</div>
+</body>
+</html>

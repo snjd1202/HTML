@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+<script type="text/javascript">
+	var json1 = {'name':'최두용','age':33,'id':'dDragon'};
+	
+	var sname = json1.name;
+	var sage = json1.age;
+	var sid = json1['id'];
+	
+	/* document.write('name : ' + sname + '<br>');
+	document.write('age : ' + sage + '<br>');
+	document.write('id : ' + sid + '<br>');
+	
+	var key = prompt('알고싶은 정보를 영어로 입력하세요.');
+	
+	var val = window.confirm(key + '의 정보를 원하시나요?');
+
+	if(val == true){
+		alert(json1[key]);
+	} */
+</script>
+</head>
+<body>
+	<div class="w3-col m2 w3-button w3-green w3-margin" id="btn0">button0</div>
+	<div class="w3-col m2 w3-button w3-blue w3-margin" id="btn1">button1</div>
+	<div class="w3-col m2 w3-button w3-red w3-margin" id="btn2">button2</div>
+	<div class="w3-col m2 w3-button w3-light-green w3-margin" id="btn3">setInterval</div>
+	<div class="w3-col m2 w3-button w3-light-green w3-margin" id="btn4">clearInterval</div>
+	<div class="w3-col m2 w3-button w3-lime w3-margin" id="btn5">setTimeout</div>
+</body>
+<script type="text/javascript">
+	var child;
+	var wd=0;
+	var hi=0;
+	document.getElementById('btn0').onclick = function(){
+		child = window.open('','interval Test','width:200px, height:200px');
+	}
+	document.getElementById('btn1').onclick = function(){
+		wd += 50;
+		hi += 30;
+		child.moveTo(wd,hi);
+	}
+	document.getElementById('btn2').onclick = function(){
+		child.moveBy(80,80);
+	}
+	
+	var no=0;
+	function intvl(){
+		child.document.write(no++ + ', ');
+	}
+	function tout(){
+		child.document.write('<h3>'+ no++ + '<h3>');
+	}
+	
+	var el;
+	document.getElementById('btn3').onclick = function(){
+		el=setInterval(intvl, 1000);
+	}
+	document.getElementById('btn4').onclick = function(){
+		clearInterval(el);
+	}
+	document.getElementById('btn5').onclick = function(){
+		setTimeout(tout, 1000);
+	}
+	
+</script>
+</html>

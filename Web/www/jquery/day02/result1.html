@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="../css/day02/test01.css">
+<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<style>
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*
+		alert($(location).attr('href'));
+		
+		var type = $('#input').attr('type');
+		alert('input tag type : ' + type);
+		
+		$('input[type="hidden"]').attr('id', 'input');
+		$('#input').attr('type', 'date');
+		*/
+		
+		var param = $(location).attr('search').substring(1); // ?id=xxxx&pw=xxxx
+		
+		/*
+		var sid = param.substring(param.indexOf('=') + 1, param.indexOf('&'));
+		var spw = param.substring(param.lastIndexOf('=') + 1);
+		*/
+		
+		/*
+		var arr = new Array();
+		var tmp = param + '&';
+		for(var i = 0 ; i < 2 ; i++ ){
+			arr[i] = tmp.substring(tmp.indexOf('=') + 1, tmp.indexOf('&'));
+			tmp = tmp.substring(tmp.indexOf('&') + 1);
+		}
+		*/
+		
+		// 연관배열로 처리하는 방법
+		
+		var tmp = param.split('&');
+		var arr = {};
+		for(var i = 0 ; i < tmp.length ; i++ ){
+			// 키값과 벨류값이 분리되어서 필요하다.
+			// 키값을 꺼내고
+			var key = tmp[i].substring(0, tmp[i].indexOf('='));
+			var value = tmp[i].substring(tmp[i].indexOf('=') + 1);
+			
+			// 데이터 채우고
+			arr[key] = value;
+		}
+		
+		/* 
+		$('#sid').html(sid);
+		$('#spw').html(spw);
+		 */
+		/* 
+		$('#sid').html(arr[0]);
+		$('#spw').html(arr[1]);
+		 */
+		$('#sid').html(arr['id']);
+		$('#spw').html(arr['pw']);
+		
+		$('.w3-center').css('color', 'purple');
+		$('.w3-center').css('text-shadow', '2px 2px 3px gray');
+	});
+	
+</script>
+</head>
+<body>
+	<input type="hidden">
+	<div class="w3-content mxw">
+		<div class="w3-col w3-padding w3-card w3-margin-top w3-border">
+			<div class="w3-row">
+				<h4 class="w3-col m3 w3-padding w3-right-align">I D : </h4>
+				<h4 class="w3-col m8 w3-padding w3-center" id="sid"></h4>
+			</div>
+			<div class="w3-row">
+				<h4 class="w3-col m3 w3-padding w3-right-align">P W : </h4>
+				<h4 class="w3-col m8 w3-padding w3-center" id="spw"></h4>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

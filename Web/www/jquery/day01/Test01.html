@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<!-- CDN 방식 -->
+<!-- <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script> -->
+<!-- 직접 다운로드 방식 -->
+<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<style>
+
+</style>
+<script type="text/javascript">
+	function func1(){
+		$('div').addClass('w3-card-4');
+		$('div').addClass('w3-padding');
+		
+		var el = document.getElementById('d2');
+		el.style.border = '2px solid coral';
+		alert(el.innerHTML);
+		
+		alert('jquery 실행 : ' + $('#d2').html());
+	}
+	$(func1); // ==> jQuery(func1);
+</script>
+</head>
+<body>
+	<div class="w3-col m3 w3-blue w3-margin">d1</div>
+	<div class="w3-col m3 w3-pink w3-margin" id="d2">d2</div>
+	<div class="w3-col m3 w3-orange w3-margin">d3</div>
+</body>
+</html>

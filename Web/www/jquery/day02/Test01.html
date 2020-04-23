@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test </title>
+<link rel="stylesheet" href="../css/w3.css">
+<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<link rel="stylesheet" href="../css/day02/test01.css">
+<script type="text/javascript" src="../js/day02/test01.js"></script>
+<style>
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<form method="get" action="result1.html" id="frm" name="frm">
+		<input type="hidden" name="id" id="fid">
+		<input type="hidden" name="pw" id="fpw">
+	</form>
+	<div class="w3-content mxw">
+		<h3 class="w3-padding w3-blue w3-center w3-card-4 w3-round-large">Form Event Test</h3>
+		<div class="w3-col w3-padding w3-card-4 w3-round-large w3-border w3-margin-top">
+			<label for="id" class="w3-col m2 w3-right-align w3-padding-16">I D : </label>
+			<div class="w3-col m10 w3-padding">
+				<input type="text" class="w3-col w3-input w3-border" id="id" name="id">
+			</div>
+			<label for="pw" class="w3-col m2 w3-right-align w3-padding-16">P W : </label>
+			<div class="w3-col m10 w3-padding">
+				<input type="password" class="w3-col w3-input w3-border" id="pw" name="pw">
+			</div>
+			<label for="repw" class="w3-col m2 w3-right-align w3-padding-16 repw">PW Check : </label>
+			<div class="w3-col m10 w3-padding repw">
+				<input type="password" class="w3-col w3-input w3-border" id="repw" name="repw">
+			</div>
+			<div class="w3-col w3-center">
+				<span id="pwmsg"></span>
+			</div>
+		</div>
+		<div class="w3-col w3-margin-top w3-padding w3-card w3-border dnone" id="dl">
+			<h3 id="txt"></h3>
+		</div>
+		<div class="w3-col w3-margin-top">
+			<span class="w3-half w3-red w3-button w3-padding w3-center" id="btn1">button1</span>
+			<span class="w3-half w3-blue w3-button w3-padding w3-center" id="btn2">button2</span>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+	.mxwidth {
+		max-width: 500px;
+	}
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="w3-content mxwidth">
+		<h3 class="w3-orange w3-card w3-center">Form Test</h3>
+		<form class="w3-col w3-margin-top w3-padding w3-card w3-border" name="frm">
+			<div class="w3-col">
+				<label for="id" class="w3-col m3 w3-right-align w3-padding">I D : </label>
+				<input type="text" name="id" class="w3-col m9 w3-padding w3-border">
+			</div>
+			<div class="w3-col w3-margin-top">
+				<label for="pw" class="w3-col m3 w3-right-align w3-padding">P W : </label>
+				<input type="password" name="pw" class="w3-col m9 w3-padding w3-border">
+			</div>
+			<div class="w3-col w3-margin-top">
+				<label for="file" class="w3-col m3 w3-right-align w3-padding">Profile : </label>
+				<input type="file" name="file" class="w3-col m9 w3-padding w3-border">
+			</div>
+		</form>
+		<div class="w3-col w3-margin-top">
+			<div class="w3-third w3-hover-red w3-pale-red w3-button" id="ibtn">I D</div>
+			<div class="w3-third w3-hover-blue w3-pale-blue w3-button" id="pbtn">P W</div>
+			<div class="w3-third w3-hover-aqua w3-indigo w3-button" id="fbtn">File</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById('ibtn').onclick = function(){
+		var sid = document.frm.id.value;
+		alert(sid);
+	}
+	document.getElementById('pbtn').onclick = function(){
+		var spw = document.frm.pw.value;
+		alert(spw);
+	}
+	document.getElementById('fbtn').onclick = function(){
+		var sfile = document.frm.file.value;
+		alert(sfile);
+	}
+</script>
+</html>

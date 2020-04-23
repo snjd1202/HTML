@@ -1,0 +1,12 @@
+.btncls {
+	width: 120px;
+	height: 35px;
+}
+.box {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+}
+.ft0 {
+	font-size: 0pt;
+}

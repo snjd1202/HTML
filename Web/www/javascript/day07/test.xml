@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+	<person>
+		<name>최두용</name>
+		<age>33</age>
+		<id>dDragon</id>
+		<tel>011-9292-4184</tel>
+		<mail>dDragon@increpas.com</mail>
+	</person>
+	<person>
+		<name>서동혁</name>
+		<age>27</age>
+		<id>seo</id>
+		<tel>010-9823-5579</tel>
+		<mail>seo@increpas.com</mail>
+	</person>
+</people>

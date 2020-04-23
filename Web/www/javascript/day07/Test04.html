@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+</head>
+<body>
+	<div class="w3-col m3 w3-button w3-pale-blue" id="btn1">Click</div>
+</body>
+<script type="text/javascript">
+	function func01(){
+		alert("#####");
+	}
+	document.getElementById('btn1').addEventListener("click",func01);
+	document.getElementById('btn1').addEventListener("mouseover",function(){
+		this.classList.add('w3-hover-pink');
+	});
+</script>
+</html>

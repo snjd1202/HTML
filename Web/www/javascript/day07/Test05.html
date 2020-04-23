@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<style>
+
+</style>
+</head>
+<body>
+	<div id="org_div1">위의 문장은 동적으로 만들어진 것입니다.</div>
+</body>
+<script type="text/javascript">
+	var my_div = null;
+	var newDiv = null;
+	newDiv = document.createElement('div');
+	newDiv2 = document.createElement('div');
+	newDiv.innerHTML = '<h1 class="w3-orange w3-center">졸려<small>-수진</small></h1>';
+	newDiv2.innerHTML = '<h1 class="w3-blue w3-center">졸려<small>-수진</small></h1>';
+	
+	my_div = document.getElementById('org_div1');
+	document.body.insertBefore(newDiv, my_div);
+	my_div.appendChild(newDiv2);
+</script>
+
+</html>

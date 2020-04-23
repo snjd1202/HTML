@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<link rel="stylesheet" href="../css/w3.css"  />
+<script type="text/javascript" src="../js/jquery-3.5.0.min.js"></script>
+<style>
+	.ttl {
+		display: inline-block;
+		height: 90px;
+		width: 50%;
+	}
+	input {
+		margin: 10px;
+	}
+	.btn1{
+		text-align: center;
+		
+	}
+	
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#lbl').attr('for', 'id');
+		/* $('#pw').attr('for', 'pw'); */
+		
+		$('#login').click(function(){
+			
+			$('#frm').attr('method', 'get');
+			$('#frm').attr('action', 'Result.html');
+			
+			// 인풋 태그의 내용이 입력되지 않으면 이 함수를 종료시키자.
+			var sid = $('#id').val();
+			var spw = $('#pw').val();
+			
+			/* if(!sid){
+				$('#pw').val('');
+				$('#id').focus();
+				return;
+			} */
+			
+			if(!sid){
+				$('#id').val('dDragon');
+			}
+			if(!spw){
+				$('#pw').val('12345');
+			}
+			
+			$('#frm').submit();
+		});
+	});
+</script>
+</head>
+<body class="w3-center">
+	<div class="w3-col m3"><p></p></div>
+		
+		<div class=" w3-col m6 w3-margin">
+			<h3 class="w3-margin w3-blue w3-padding" style="border: 10px dotted yellow">Login</h3>
+			<form id="frm" name="">
+			<div class="w3-col w3-border">
+				<div>
+					<label id="lbl">I D : </label><input type="text" id="id" for="id">
+				</div>
+				<div>
+					<label id="lbp">P W : </label><input type="password" id="pw" for="pw">
+				</div>
+			</div>
+			</form>
+			<div class="w3-col w3-margin-top">
+				<div class="w3-button w3-half w3-border w3-pale-red w3-round" id="home">Home</div>
+				<div class="w3-button w3-half w3-border w3-pale-blue w3-round" id="login">Login</div>
+			</div>
+		</div>
+</body>
+</html>
